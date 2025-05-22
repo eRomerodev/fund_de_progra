@@ -1,6 +1,6 @@
 
-a = "12345678901234567890"
-b = "98765432109876543210"
+a = "999"
+b = "1"
 a = list(a)
 b = list(b)
 
@@ -48,3 +48,6 @@ for numero in sum_final:
     sum_final_str += str(numero)
 
 print(sum_final_str)
+
+
+
