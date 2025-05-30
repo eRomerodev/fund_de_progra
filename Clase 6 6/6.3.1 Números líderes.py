@@ -1,8 +1,13 @@
-# me dan una lista
-# lista 2
-# para cada elemento de la lista 1 checo si hay un numero mayor a partir de su indice +1 en la lista 1
-    # si no hay ninguno, entonces lo agrego a una lista "lider"
+'''
+Clase:        6
+Tema:         Manejo de listas
+Ejercicio:    6.3.1
+Descripción:  Dada una lista por el usuario, tomando cada numero, si los numeros que tiene a la derecha todos son menores, entonces es "lider" regresa los numeros lideres
 
+Autor:        Diego Emiliano Romero Castillo
+Fecha:        2025-05-30
+Estado:       [ Terminado ]
+'''
 
 lista = input("Dame una lista: ")
 

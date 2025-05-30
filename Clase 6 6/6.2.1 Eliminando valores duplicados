@@ -1,8 +1,13 @@
-# me dan una lista
-# agarro un item y agarro ese numero y lo agrego en otra lista
-# hago lo mismo con el siguiente siempre y cuando no esté en la lista nueva
+'''
+Clase:        6
+Tema:         Manejo de listas
+Ejercicio:    6.2.1
+Descripción:  Dada una lista ingresada por el usuario, regresa la lista sin repetidos
 
-
+Autor:        Diego Emiliano Romero Castillo
+Fecha:        2025-05-30
+Estado:       [ Terminado ]
+'''
 inputt = input("Dame una lista:")
 final = []
 
