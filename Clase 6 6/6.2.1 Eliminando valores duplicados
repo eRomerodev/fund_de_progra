@@ -1,0 +1,15 @@
+# me dan una lista
+# agarro un item y agarro ese numero y lo agrego en otra lista
+# hago lo mismo con el siguiente siempre y cuando no esté en la lista nueva
+
+
+inputt = input("Dame una lista:")
+final = []
+
+liston = inputt.split()
+
+for i in liston:
+    if i not in final:
+        final.append(i)
+
+print(*final)
