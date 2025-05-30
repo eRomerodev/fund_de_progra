@@ -1,6 +1,6 @@
-a = 218271
-b = 4287482
-k = 1000
+a = 5
+b = 2
+k = 10
 
 
 d = str(a/b) # string cabal
