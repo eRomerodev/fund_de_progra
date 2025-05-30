@@ -26,4 +26,4 @@ for i in lista1:
     if hola == True:
         lideres.append(i)
 
-print(lideres)
+print(*lideres)
