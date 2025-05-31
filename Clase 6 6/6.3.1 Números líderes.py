@@ -29,6 +29,7 @@ for i in lista1:
             hola = False
             pass
     if hola == True:
-        lideres.append(i)
+        if i not in lideres:
+            lideres.append(i)
 
 print(*lideres)
