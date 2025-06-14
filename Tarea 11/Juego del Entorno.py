@@ -13,18 +13,24 @@ Fecha:        14-06-2025
 Estado:       [ Terminado ]
 '''
 
-
 filas = int(input("Número de filas: "))
 columnas = int(input("Número de columnas: "))
 
 print("Ingresa la matriz (una fila por línea, con números separados por coma):")
 matriz = []
 for numero_fila in range(filas):
-    fila = list(map(int, input(f"Fila {numero_fila + 1}: ").split(',')))
-    matriz.append(fila)
+    while True:
+        fila = list(map(int, input(f"Fila {numero_fila + 1}: ").split(',')))
+        if len(fila) == columnas:
+            matriz.append(fila)
+            break
+        else:
+            print(f"Error: se esperaban {columnas} valores. Intenta nuevamente.")
 
-posiciones_vecinas = [(-1, -1),(-1, 0),(-1, 1),(0, -1),(0, 1),(1, -1),(1, 0),(1, 1)]
-
+# Definición de posiciones vecinas (8 direcciones)
+posiciones_vecinas = [(-1, -1), (-1, 0), (-1, 1),
+                      (0, -1),          (0, 1),
+                      (1, -1),  (1, 0),  (1, 1)]
 
 matriz_resultado = []
 
@@ -33,18 +39,13 @@ for fila_actual in range(filas):
     for columna_actual in range(columnas):
         total_vecinos_con_uno = 0
 
-        for desplazamiento_fila, desplazamiento_columna in posiciones_vecinas:
-            nueva_fila_vecina = fila_actual + desplazamiento_fila
-            nueva_columna_vecina = columna_actual + desplazamiento_columna
-
-            dentro_de_limites = (0 <= nueva_fila_vecina < filas and 0 <= nueva_columna_vecina < columnas)
-
-            if dentro_de_limites:
-                if matriz[nueva_fila_vecina][nueva_columna_vecina] == 1:
+        for df, dc in posiciones_vecinas:
+            nf, nc = fila_actual + df, columna_actual + dc
+            if 0 <= nf < filas and 0 <= nc < columnas:
+                if matriz[nf][nc] == 1:
                     total_vecinos_con_uno += 1
 
         nueva_fila.append(total_vecinos_con_uno)
-
     matriz_resultado.append(nueva_fila)
 
 print("Salida:")

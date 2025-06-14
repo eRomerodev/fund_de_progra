@@ -9,7 +9,7 @@ con los elementos de la diagonal
 secundaria.
 
 Autor:        Diego Emiliano Romero Castillo
-Fecha:        2025-14-26
+Fecha:        14-06-2025
 Estado:       [ Terminado ]
 '''
 
